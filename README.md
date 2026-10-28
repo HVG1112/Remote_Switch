@@ -1,4 +1,4 @@
-# Remote Switch --- Wireless Video Trigger System
+# Remote Switch
 
 **Author:** Harshvardhan Gupta
 
