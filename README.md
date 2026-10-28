@@ -1,4 +1,4 @@
-# Remote Switch --- Wireless Video Trigger System
+# Remote Switch
 
 **Author:** Harshvardhan Gupta
 
@@ -40,7 +40,6 @@ the live event.
 
 ## System Architecture
 
-``` text
 [9 V Battery]
       |
       v
@@ -51,10 +50,10 @@ the live event.
                                                      |
                                                      v
                                            [Selected Video Playback]
-```
+
 
 The Arduino reads the controls, updates the selected-video indicators,
-monitors battery voltage, and sends a serial value (`1`--`4`) over
+monitors battery voltage, and sends a serial value (1 to 4) over
 Bluetooth when triggered. The Python application maps that value to the
 corresponding video file and starts playback.
 
@@ -160,11 +159,7 @@ communication and `os.startfile()` to launch videos on Windows.
     `os.startfile()`
 -   Four local video files
 
-Install the Python dependency with:
-
-``` bash
-python -m pip install pyserial
-```
+Install the Python dependency with: python -m pip install pyserial
 
 ## Setup
 
@@ -191,7 +186,7 @@ python -m pip install pyserial
 
 Update these values in the Python script to match your computer:
 
-``` python
+python
 COM_PORT = "COM13"
 BAUD_RATE = 9600
 
@@ -199,7 +194,6 @@ VIDEO_A = r"C:\path\to\West_Campus_Part_1.mp4"
 VIDEO_B = r"C:\path\to\East_Campus_Part_1.mp4"
 VIDEO_C = r"C:\path\to\West_Campus_Part_2.mp4"
 VIDEO_D = r"C:\path\to\East_Campus_Part_2.mp4"
-```
 
 `COM13` is the port used in the original report; your computer may
 assign a different port. Replace the example paths with the real paths
@@ -242,7 +236,6 @@ during Bluetooth transmission.
 
 A suggested repository layout is:
 
-``` text
 remote-switch/
 ├── README.md
 ├── firmware/
@@ -255,7 +248,6 @@ remote-switch/
 │   └── photos/
 └── docs/
     └── Remote_Switch_Report.pdf
-```
 
 Adjust the filenames and folders to match the files actually included in
 your repository.
